@@ -15,6 +15,7 @@ repositories {
 dependencies {
     compile "com.google.inject:guice:$guiceVersion"
     compile "com.google.inject.extensions:guice-assistedinject:$guiceVersion"
+    compile "com.google.inject.extensions:guice-multibindings:$guiceVersion"
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.3.0'
