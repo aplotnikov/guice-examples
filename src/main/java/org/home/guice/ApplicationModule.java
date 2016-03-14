@@ -5,7 +5,7 @@ import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
 import com.google.inject.name.Names;
-import org.home.guice.instance.ProviderMethodBean;
+import org.home.guice.instance.provider.ProviderMethodBean;
 import org.home.guice.instance.customannotation.AnnotationNamedBeanImplementation;
 import org.home.guice.instance.customannotation.AnnotationNamedBeanInterface;
 import org.home.guice.instance.customannotation.MyNamedAnnotation;
