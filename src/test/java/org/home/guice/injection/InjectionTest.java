@@ -1,11 +1,9 @@
-package org.home.guice;
+package org.home.guice.injection;
 
 import com.google.inject.Inject;
 import nl.pvanassen.guicejunitrunner.GuiceJUnitRunner;
 import nl.pvanassen.guicejunitrunner.GuiceModules;
-import org.home.guice.injection.ConstructorInjectionBean;
-import org.home.guice.injection.FieldInjectionBean;
-import org.home.guice.injection.MethodInjectionBean;
+import org.home.guice.ApplicationModule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
