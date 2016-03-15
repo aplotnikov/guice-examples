@@ -6,6 +6,9 @@ import com.google.inject.Singleton;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
 import com.google.inject.multibindings.Multibinder;
 import com.google.inject.name.Names;
+import org.home.guice.aop.AopAppliedBeanClassMatcher;
+import org.home.guice.aop.PrintMethodInterceptor;
+import org.home.guice.aop.PrintMethodMatcher;
 import org.home.guice.instance.customannotation.AnnotationNamedBeanImplementation;
 import org.home.guice.instance.customannotation.AnnotationNamedBeanInterface;
 import org.home.guice.instance.customannotation.MyNamedAnnotation;
@@ -32,6 +35,12 @@ public class ApplicationModule extends AbstractModule {
         Multibinder<MultiBindingInterface> uriBinder = Multibinder.newSetBinder(binder(), MultiBindingInterface.class);
         uriBinder.addBinding().to(MultiBindingImplementation1.class);
         uriBinder.addBinding().to(MultiBindingImplementation2.class);
+
+        bindInterceptor(
+                new AopAppliedBeanClassMatcher(),
+                new PrintMethodMatcher(),
+                new PrintMethodInterceptor()
+        );
     }
 
     @Provides
